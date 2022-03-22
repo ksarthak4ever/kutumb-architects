@@ -1,0 +1,30 @@
+/* #######################################
+Architecture Portfolio Styles 
+by Andrii Chemerys 
+####################################### */
+
+@import "abstracts/variables";
+
+@import "base/base";
+@import "base/typography";
+
+// @import "pages/home";
+
+@import "pages/about";
+@import "layout/projects-main-page";
+@import "layout/projects-second-page";
+
+@import "components/vertical-timeline";
+// @import "components/hotel-second-page";
+@import "components/sports-hall-second-page";
+// @import "components/theater-second-page";
+@import "components/kindergarten-second-page";
+@import "components/museum-second-page";
+// @import "components/apartment-second-page";
+
+@import "layout/header";
+@import "layout/footer";
+
+// body {
+//     background-color: rgb(61, 58, 58);
+// }

@@ -1,0 +1,28 @@
+.projects-second-page {
+    padding: 2vh 7vw;
+    display: grid;
+    grid-template: repeat(6, 1fr) / 1fr;
+    grid-gap: 0.8vw;
+    justify-items: center;
+    align-items: center;
+}
+
+.hotel-p2__img,
+.apartment-p2__img,
+.theater-p2__img,
+.sports-hall-p2__img,
+.kindergarten-p2__img {
+    width: 100%
+}
+
+@media only screen and (min-width: $breakpoint-xs) {
+    .projects-second-page {
+        grid-template: repeat(3, 1fr)/repeat(2, 1fr);
+    }
+}
+
+@media only screen and (min-width: $breakpoint-sm) {
+    .projects-second-page {
+        grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+    }
+}

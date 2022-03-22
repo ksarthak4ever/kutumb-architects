@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&display=swap");
+
+.navbar {
+    font-family: "Cormorant Garamond", serif;
+    // font-family: "Cardo", serif;
+
+    font-weight: 500;
+    font-size: 16px;
+    color: $color-primary;
+    text-decoration: none;
+}
+
+.header {
+    &__logo {
+        font-family: "Cormorant Garamond", serif;
+        // font-family: "Cardo", serif;
+
+        font-weight: 700;
+        font-size: 28px;
+        color: $color-primary;
+    }
+}
+
+.main {
+    &__title {
+        font-family: "Cormorant Garamond", serif;
+        // font-family: "Cardo", serif;
+
+        font-weight: 700;
+        font-size: 20px;
+        color: $color-primary;
+    }
+
+    &__desc {
+        font-family: "Cormorant Garamond", serif;
+        // font-family: "Cardo", serif;
+
+        font-weight: 500;
+        font-size: 16px;
+        color: $color-primary;
+    }
+}
+
+.footer {
+    &__text-author-credit {
+        font-family: "Cormorant Garamond", serif;
+        // font-family: "Cardo", serif;
+
+        font-weight: 700;
+        font-size: 22px;
+        color: $color-primary;
+    }
+
+    &__text-social-media,
+    &__text-year-issue {
+        font-family: "Cormorant Garamond", serif;
+        // font-family: "Cardo", serif;
+
+        font-weight: 500;
+        font-size: 20px;
+        color: $color-primary;
+    }
+}
+
+.timeline {
+    font-family: "Cormorant Garamond", serif;
+    color: $color-primary;
+
+    &__page-name {
+        font-weight: 500;
+        font-size: 14px;
+        color: $color-timeline-line;
+    }
+
+    &__name {
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+    &__profession {
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    &__section {
+        font-weight: 700;
+        font-size: 14px;
+    }
+
+    &__time {
+        font-size: 12px;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 14px;
+
+    }
+
+    &__paragraph {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width: $breakpoint-sm) {
+    .timeline {
+        font-family: "Cormorant Garamond", serif;
+        color: $color-primary;
+
+        &__page-name {
+            font-weight: 500;
+            font-size: 1.5vw;
+            color: $color-timeline-line;
+        }
+
+        &__name {
+            font-weight: 700;
+            font-size: 2.5vw;
+        }
+
+        &__profession {
+            font-weight: 500;
+            font-size: 1.5vw;
+        }
+
+        &__section {
+            font-weight: 700;
+            font-size: 1.5vw;
+        }
+
+        &__time {
+            font-size: 1.2vw;
+        }
+
+        &__title {
+            font-weight: 500;
+            font-size: 1.5vw;
+
+        }
+
+        &__paragraph {
+            font-size: 1.3vw;
+        }
+    }
+}
+
+@media only screen and (min-width: $breakpoint-lg) {
+    .timeline {
+        font-family: "Cormorant Garamond", serif;
+        color: $color-primary;
+
+        &__page-name {
+            font-weight: 500;
+            font-size: 1.2vw;
+            color: $color-timeline-line;
+        }
+
+        &__name {
+            font-weight: 700;
+            font-size: 2vw;
+        }
+
+        &__profession {
+            font-weight: 500;
+            font-size: 1.2vw;
+        }
+
+        &__section {
+            font-weight: 700;
+            font-size: 1.2vw;
+        }
+
+        &__time {
+            font-size: 1.2vw;
+        }
+
+        &__title {
+            font-weight: 500;
+            font-size: 1.2vw;
+
+        }
+
+        &__paragraph {
+            font-size: 1vw;
+        }
+    }
+}
