@@ -33,14 +33,14 @@ body {
 
 .main__title {
   font-family: "Cormorant Garamond", serif;
-  font-weight: 700;
-  font-size: 20px;
+  font-weight: 1000;
+  font-size: 25px;
   color: #222d31; }
 
 .main__desc {
   font-family: "Cormorant Garamond", serif;
   font-weight: 500;
-  font-size: 16px;
+  font-size: 20px;
   color: #222d31; }
 
 .footer__text-author-credit {
@@ -221,10 +221,10 @@ body {
 
 .hotel-p2__img,
 .apartment-p2__img,
-.commercial-complex-p2__img,
+.theater-p2__img,
 .sports-hall-p2__img,
 .kindergarten-p2__img {
-  width: 200%; }
+  width: 100%; }
 
 @media only screen and (min-width: 600px) {
   .projects-second-page {
@@ -427,7 +427,7 @@ body {
   .timeline__title {
     margin-bottom: 5px; } }
 
-.residential-planning-p2__div-1 {
+.sports-hall-p2__div-1 {
   grid-row: 1 / span 2; }
 
 .kindergarten-p2 {
@@ -606,38 +606,3 @@ body {
     margin: 5px 2px;
     color: #222d31;
     background-color: transparent; }
-
-
-/*.commercial-complex-p2 {
-  padding: 2vh 7vw 2vh 7vw;
-  display: grid;
-  grid-template: repeat(2, auto)/repeat(1, 1fr);
-  grid-column-gap: 0.8vw;
-  justify-items: center;
-  align-items: center; }
-  .commercial-complex-p2__img {
-    width: 100%; }
-    .commercial-complex-p2__img-1 {
-      width: 100%; }
-
-@media only screen and (min-width: 600px) {
-/*  .commercial-complex-p2 {
-    grid-template: repeat(4, auto)/repeat(2, 1fr); }*/
-    .commercial-complex-p2__img-1 {
-      width: 70%; }
-    .commercial-complex-p2__img-2 {
-      width: 70%; }
-    }
-
-@media only screen and (min-width: 600px) and (min-width: 960px) {
-  /*.commercial-complex-p2 {
-    grid-template: repeat(2, 1fr)/repeat(12, 1fr); }*/
-    .commercial-complex-p2__img {
-      width: 70%; }
-      .commercial-complex-p2__img-1 {
-        grid-column: 1/3;
-        grid-row: 1/2; }
-      .commercial-complex-p2__img-2 {
-        grid-column: 3/6;
-        grid-row: 1/2; }
-      }*/
