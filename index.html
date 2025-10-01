@@ -200,6 +200,80 @@
             letter-spacing: -1px;
         }
 
+        /* ====== Know More Section Styles ====== */
+        .know-more {
+            background: linear-gradient(135deg, #2c5aa0 0%, #1e3d6f 100%);
+            color: white;
+            padding: 4rem 0;
+        }
+
+        .know-more-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 3rem;
+        }
+
+        .know-more-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .know-more-text p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            opacity: 0.9;
+            max-width: 500px;
+        }
+
+        .know-more-actions {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .download-btn, .view-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .download-btn {
+            background: white;
+            color: #2c5aa0;
+        }
+
+        .download-btn:hover {
+            background: #f8f9fa;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .view-btn {
+            background: transparent;
+            color: white;
+            border-color: white;
+        }
+
+        .view-btn:hover {
+            background: white;
+            color: #2c5aa0;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .know-more-actions i {
+            font-size: 1.1rem;
+        }
+
         /* ====== About Section Styles ====== */
         .about {
             background: #F4F2EB;
@@ -384,6 +458,34 @@
             color: #5C5C5C;
             line-height: 1.6;
             margin-bottom: 1.5rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .project-description.expanded {
+            display: block;
+            -webkit-line-clamp: unset;
+        }
+        
+        .read-more-btn {
+            color: #2c5aa0;
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            margin-top: 0.5rem;
+            display: inline-block; /* Visible by default */
+            transition: color 0.3s ease;
+        }
+        
+        .read-more-btn:hover {
+            color: #1e3d6f;
+        }
+        
+        .read-more-btn.hidden {
+            display: none;
         }
 
         /* ====== Blogs Section Styles ====== */
@@ -699,6 +801,25 @@
                 font-size: 1.1rem;
             }
 
+            .know-more-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .know-more-text h2 {
+                font-size: 2rem;
+            }
+
+            .know-more-actions {
+                justify-content: center;
+            }
+
+            .download-btn, .view-btn {
+                padding: 0.8rem 1.5rem;
+                font-size: 0.9rem;
+            }
+
             .about-content,
             .contact-content {
                 grid-template-columns: 1fr;
@@ -746,15 +867,38 @@
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#blogs">Blogs</a></li>
                 <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+                <li><a href="#know-more">Know More</a></li>
+                    </ul>
+                </div>
+            </nav>
 
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Architecture Redefined</h1>
             <p>Creating spaces that inspire, innovate, and transform communities through thoughtful design and sustainable practices.</p>
             <a href="#projects" class="cta-button">View Our Work</a>
+                </div>
+    </section>
+
+    <!-- Know More Section -->
+    <section id="know-more" class="know-more">
+        <div class="container">
+            <div class="know-more-content">
+                <div class="know-more-text">
+                    <h2>Know More About Our Work</h2>
+                    <p>Explore our comprehensive presentation to learn more about our architectural philosophy, design approach, and portfolio of successful projects.</p>
+                </div>
+                <div class="know-more-actions">
+                    <a href="presentation.pdf" target="_blank" class="download-btn">
+                        <i class="fas fa-download"></i>
+                        Download Presentation
+                    </a>
+                    <a href="presentation.pdf" target="_blank" class="view-btn">
+                        <i class="fas fa-eye"></i>
+                        View Online
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -809,7 +953,7 @@
             <h2 class="section-title">Featured Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-image" style="background-image: url('img/mrs_madhu/img_1.jpg');">
+                    <div class="project-image" style="background-image: url('Images/img_1.jpg');">
                         <div class="project-overlay">
                             <div class="overlay-content">
                                 <a href="#" class="view-project-btn">View Project</a>
@@ -817,14 +961,31 @@
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>Mrs. Madhu Saxena Residence</h3>
+                        <h3>Mixed Use Building</h3>
+                        <span class="project-type">Mixed Use</span>
+                        <p class="project-description">A G+2 mixed-use building at Anmol Vihar, Kota, designed for Mr. Vishnu Gocher Ji, features a residential layout on the ground floor and hostel planning on the upper floors. With well-ventilated interiors, attached toilets, and caretaker facilities, the design ensures comfort and functionality. The modern façade highlights a balance of horizontal and vertical elements.</p>
+                        <span class="read-more-btn" onclick="toggleDescription(this)">Read More</span>
+                                </div>
+                            </div>
+                            
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('Images/img_2.jpg');">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <a href="#" class="view-project-btn">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Simplex Villa</h3>
                         <span class="project-type">Residential</span>
-                        <p class="project-description">1987sqft residential project in Lucknow with traditional planning and modern amenities.</p>
+                        <p class="project-description">A modern villa with simplex planning, designed economically for a small family of four. The layout includes two bedrooms with attached toilets on the ground floor and a one-bedroom set on the first floor. The villa integrates classical design elements such as mouldings, large glass windows, and elegant wrought iron railings, blending comfort with timeless aesthetics.</p>
+                        <span class="read-more-btn" onclick="toggleDescription(this)">Read More</span>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <div class="project-image" style="background-image: url('img/narendra_prasad/img_1.jpg');">
+                    <div class="project-image" style="background-image: url('Images/img_3.jpeg');">
                         <div class="project-overlay">
                             <div class="overlay-content">
                                 <a href="#" class="view-project-btn">View Project</a>
@@ -832,14 +993,31 @@
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>Mr. Narendra Prasad Residence</h3>
-                        <span class="project-type">Residential</span>
-                        <p class="project-description">2124sqft residential project in Dehradun with cross ventilation and modern design elements.</p>
+                        <h3>Alteration of Old Villa with Proposed Floor</h3>
+                        <span class="project-type">Renovation</span>
+                        <p class="project-description">Alteration cum addition in existing residence for Dr. Sanjay Dhakad Ji, Kota. This is an old villa which was in a dilapidated condition like sinking floors, damaged slab. We have redesigned the old structure at ground floor as well as proposed an extension of this villa at first floor. In ground floor we have redesigned the existing kitchen and puja room too.</p>
+                        <span class="read-more-btn" onclick="toggleDescription(this)">Read More</span>
+                    </div>
+                            </div>
+                            
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('Images/img_4.jpg');">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <a href="#" class="view-project-btn">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Banquet Cum Marriage Garden</h3>
+                        <span class="project-type">Hospitality</span>
+                        <p class="project-description">We are currently developing a landmark banquet and hospitality destination designed to seamlessly blend celebration, leisure, and luxury. The project envisions a grand marriage garden complemented by three spacious banquet halls, thoughtfully planned to accommodate gatherings of varying scales—from intimate family events to large ceremonial functions. To enhance the guest experience, the facility also integrates 60+ elegantly designed rooms, offering modern comforts and convenience for extended stays during weddings and celebrations. At the heart of the development, a swimming pool and landscaped green courts introduce a resort-like atmosphere, ensuring relaxation and recreation alongside festivities. Careful attention has been given to zoning, circulation, and aesthetics, ensuring smooth functionality without compromising the sense of grandeur. This ongoing site is conceived as more than just a venue—it is envisioned as a destination for timeless memories, where architecture supports cultural traditions while elevating hospitality standards.</p>
+                        <span class="read-more-btn" onclick="toggleDescription(this)">Read More</span>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <div class="project-image" style="background-image: url('img/commercial_complex/img_1.jpg');">
+                    <div class="project-image" style="background-image: url('Images/img_5.jpg');">
                         <div class="project-overlay">
                             <div class="overlay-content">
                                 <a href="#" class="view-project-btn">View Project</a>
@@ -847,14 +1025,15 @@
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>Commercial Complex</h3>
+                        <h3>Hostel</h3>
                         <span class="project-type">Commercial</span>
-                        <p class="project-description">Modern commercial complex with innovative design and sustainable features.</p>
+                        <p class="project-description">A (110' X 30') commercial planning commercial hostel.</p>
+                        <span class="read-more-btn" onclick="toggleDescription(this)">Read More</span>
                     </div>
-                </div>
-
+                            </div>
+                            
                 <div class="project-card">
-                    <div class="project-image" style="background-image: url('img/row_housing/img_1.jpg');">
+                    <div class="project-image" style="background-image: url('Images/img_6.jpeg');">
                         <div class="project-overlay">
                             <div class="overlay-content">
                                 <a href="#" class="view-project-btn">View Project</a>
@@ -862,33 +1041,107 @@
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>Row Housing Project</h3>
-                        <span class="project-type">Residential</span>
-                        <p class="project-description">Shagun Prime row housing project in Kota with modern amenities and efficient planning.</p>
+                        <h3>Malik Ji Interior Site</h3>
+                        <span class="project-type">Interior</span>
+                        <p class="project-description">Interior site design and implementation for Malik Ji.</p>
+                        <span class="read-more-btn" onclick="toggleDescription(this)">Read More</span>
+                    </div>
+                            </div>
+                            
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('Images/img_7.jpeg');">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <a href="#" class="view-project-btn">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Narendra Ji Interior Site</h3>
+                        <span class="project-type">Interior</span>
+                        <p class="project-description">Interior site design and implementation for Narendra Ji.</p>
+                        <span class="read-more-btn" onclick="toggleDescription(this)">Read More</span>
+                    </div>
+                            </div>
+                            
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('Images/img_8.jpeg');">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <a href="#" class="view-project-btn">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Modern Interior Design</h3>
+                        <span class="project-type">Interior</span>
+                        <p class="project-description">An intimate hotel experience with a focus on local culture and materials.</p>
+                        <span class="read-more-btn" onclick="toggleDescription(this)">Read More</span>
+                    </div>
+                            </div>
+                            
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('Images/img_9.jpg');">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <a href="#" class="view-project-btn">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Modern Bedroom Design</h3>
+                        <span class="project-type">Interior</span>
+                        <p class="project-description">An intimate hotel experience with a focus on local culture and materials.</p>
+                        <span class="read-more-btn" onclick="toggleDescription(this)">Read More</span>
+                    </div>
+                            </div>
+                            
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('Images/img_10.jpeg');">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <a href="#" class="view-project-btn">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Luxury Kitchen Design</h3>
+                        <span class="project-type">Interior</span>
+                        <p class="project-description">An intimate hotel experience with a focus on local culture and materials.</p>
+                        <span class="read-more-btn" onclick="toggleDescription(this)">Read More</span>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <section id="awards" class="awards">
-        <div class="container">
-            <h2 class="section-title">Awards & Recognition</h2>
-            <div class="awards-grid">
-                <div class="award-card">
-                    <div class="award-icon">🏆</div>
-                    <h3>Public Architecture Award</h3>
-                    <p>Metropolitan Library, 2022</p>
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('Images/img_11.jpeg');">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <a href="#" class="view-project-btn">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Modern Kitchen Design</h3>
+                        <span class="project-type">Interior</span>
+                        <p class="project-description">An intimate hotel experience with a focus on local culture and materials.</p>
+                        <span class="read-more-btn" onclick="toggleDescription(this)">Read More</span>
+                    </div>
                 </div>
-                <div class="award-card">
-                    <div class="award-icon">🥇</div>
-                    <h3>Hospitality Design Award</h3>
-                    <p>Boutique Hotel, 2023</p>
-                </div>
-                <div class="award-card">
-                    <div class="award-icon">🎖️</div>
-                    <h3>Educational Facility Design</h3>
-                    <p>Future Academy, 2024</p>
+
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('Images/img_12.jpeg');">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <a href="#" class="view-project-btn">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Modern Dining Table Interior</h3>
+                        <span class="project-type">Interior</span>
+                        <p class="project-description">A contemporary space designed for meditation and fresh air.</p>
+                        <span class="read-more-btn" onclick="toggleDescription(this)">Read More</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -899,7 +1152,6 @@
             <h2 class="section-title">Client Feedback</h2>
             <div class="feedback-grid">
                 <div class="feedback-card">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Rajesh Sharma" class="client-photo">
                     <p>"The design brought our vision to life—elegant, functional, and perfectly suited to the site."</p>
                     <div class="client-info">
                         <strong>Rajesh Sharma</strong>
@@ -907,7 +1159,6 @@
                     </div>
                 </div>
                 <div class="feedback-card">
-                    <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Priya Patel" class="client-photo">
                     <p>"A seamless experience from start to finish. The space feels both inspiring and practical."</p>
                     <div class="client-info">
                         <strong>Priya Patel</strong>
@@ -915,7 +1166,6 @@
                     </div>
                 </div>
                 <div class="feedback-card">
-                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Vikram Singh" class="client-photo">
                     <p>"We were impressed by the creativity and professionalism. The final result exceeded expectations."</p>
                     <div class="client-info">
                         <strong>Vikram Singh</strong>
@@ -923,7 +1173,6 @@
                     </div>
                 </div>
                 <div class="feedback-card">
-                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=300&q=80" alt="Ananya Gupta" class="client-photo">
                     <p>"The blend of modern aesthetics with local materials created a timeless structure."</p>
                     <div class="client-info">
                         <strong>Ananya Gupta</strong>
@@ -931,8 +1180,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+                        </div>
+                    </section>
 
     <section id="blogs" class="blogs">
         <div class="container">
@@ -957,7 +1206,7 @@
                 </div>
             </div>
         </div>
-    </section>
+                    </section>
 
     <section id="contact" class="contact">
         <div class="container">
@@ -1006,7 +1255,7 @@
                                 <h4>Working Hours</h4>
                                 <p>Monday - Saturday: 10:30 AM - 8:00 PM</p>
                             </div>
-                        </div>
+    </div>
                         <div class="social-links">
                             <h4>Follow Us</h4>
                             <div class="social-icons">
@@ -1017,8 +1266,8 @@
                                     <i class="fab fa-twitter"></i>
                                 </a>
                                 <a href="https://www.instagram.com/kutumb_architects/" target="_blank" class="social-icon">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
+                        <i class="fab fa-instagram"></i>
+                    </a>
                                 <a href="https://www.linkedin.com/in/jyoti-saxena-84492515b/?originalSubdomain=in" target="_blank" class="social-icon">
                                     <i class="fab fa-linkedin-in"></i>
                                 </a>
@@ -1127,6 +1376,45 @@
             el.style.transform = 'translateY(30px)';
             el.style.transition = 'all 0.6s ease';
             observer.observe(el);
+        });
+
+        // Check if descriptions need "Read More" functionality
+        function checkDescriptionLength() {
+            const descriptions = document.querySelectorAll('.project-description');
+            
+            descriptions.forEach(description => {
+                const readMoreBtn = description.parentElement.querySelector('.read-more-btn');
+                const text = description.textContent.trim();
+                
+                // Hide "Read More" for short descriptions (under 150 characters)
+                if (text.length <= 150) {
+                    readMoreBtn.classList.add('hidden');
+                }
+            });
+        }
+
+        // Toggle project description
+        function toggleDescription(button) {
+            const projectCard = button.closest('.project-card');
+            const description = projectCard.querySelector('.project-description');
+            
+            if (description.classList.contains('expanded')) {
+                description.classList.remove('expanded');
+                button.textContent = 'Read More';
+            } else {
+                description.classList.add('expanded');
+                button.textContent = 'Read Less';
+            }
+        }
+
+        // Initialize on page load with delay to ensure styles are applied
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(checkDescriptionLength, 100);
+        });
+        
+        // Also run on window load as backup
+        window.addEventListener('load', function() {
+            setTimeout(checkDescriptionLength, 50);
         });
     </script>
 </body>
