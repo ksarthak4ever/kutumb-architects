@@ -358,6 +358,92 @@
             letter-spacing: 1px;
         }
 
+        /* ====== Specialization Section Styles ====== */
+        .specialization {
+            background: #F8F9FA;
+            padding: 5rem 0;
+        }
+
+        .specialization-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .specialization-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #5C5C5C;
+            margin-bottom: 1.5rem;
+        }
+
+        .specialization-details {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        .regulatory-process, .project-scope {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .regulatory-process h3, .project-scope h3 {
+            color: #2c5aa0;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .regulatory-process p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .scope-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .scope-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1.5rem 1rem;
+            background: #F8F9FA;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .scope-item:hover {
+            background: #2c5aa0;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(44, 90, 160, 0.2);
+        }
+
+        .scope-item i {
+            font-size: 2rem;
+            margin-bottom: 0.8rem;
+            color: #2c5aa0;
+            transition: color 0.3s ease;
+        }
+
+        .scope-item:hover i {
+            color: white;
+        }
+
+        .scope-item span {
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
         /* ====== Projects Section Styles ====== */
         .projects-grid {
             display: grid;
@@ -490,33 +576,99 @@
 
         /* ====== Blogs Section Styles ====== */
         .blogs {
-            background: #F4F2EB;
+            background: #E6E8E6;
+            padding: 5rem 0;
+        }
+
+        .blogs-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .blogs-divider {
+            width: 80px;
+            height: 4px;
+            background-color: #D4AF37;
+            margin: 1rem auto;
+        }
+
+        .blogs-description {
+            max-width: 600px;
+            margin: 1rem auto 0;
+            color: #555555;
+            font-size: 1.1rem;
+            line-height: 1.6;
         }
 
         .blogs-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .blog-card-link {
+            text-decoration: none;
+            color: inherit;
         }
 
         .blog-card {
-            background: white;
-            border-radius: 15px;
+            position: relative;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-            cursor: pointer;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
         }
 
         .blog-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            transform: scale(1.02);
         }
 
         .blog-image {
             width: 100%;
-            height: 250px;
+            height: 256px;
             object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .blog-card:hover .blog-image {
+            transform: scale(1.1);
+        }
+
+        .blog-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .blog-card:hover .blog-overlay {
+            opacity: 1;
+        }
+
+        .overlay-content {
+            text-align: center;
+            padding: 1rem;
+            color: white;
+        }
+
+        .blog-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: white;
+        }
+
+        .blog-description {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 1.4;
         }
 
         .blog-content {
@@ -583,6 +735,101 @@
         .award-card p {
             color: #5C5C5C;
             font-size: 1rem;
+        }
+
+        /* ====== Team Section Styles ====== */
+        .team {
+            background: #FFFFFF;
+            padding: 5rem 0;
+        }
+
+        .team-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .team-divider {
+            width: 80px;
+            height: 4px;
+            background-color: #D4AF37;
+            margin: 1rem auto;
+        }
+
+        .team-description {
+            max-width: 600px;
+            margin: 1rem auto 0;
+            color: #555555;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .team-card {
+            background-color: #E6E8E6;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .team-card:hover {
+            transform: scale(1.05);
+        }
+
+        .team-card-content {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .team-photo {
+            width: 128px;
+            height: 128px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 1rem;
+            display: block;
+        }
+
+        .team-photo-placeholder {
+            width: 128px;
+            height: 128px;
+            border-radius: 50%;
+            background-color: #2c5aa0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: white;
+        }
+
+        .team-photo-placeholder i {
+            font-size: 3rem;
+        }
+
+        .team-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #2A3A4A;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-position {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #D4AF37;
+            margin-bottom: 1rem;
+        }
+
+        .team-bio {
+            color: #555555;
+            line-height: 1.6;
+            font-size: 0.95rem;
         }
 
         /* ====== Client Feedback Section Styles ====== */
@@ -820,6 +1067,42 @@
                 font-size: 0.9rem;
             }
 
+            .specialization-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .scope-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .scope-item {
+                padding: 1rem 0.5rem;
+            }
+
+            .scope-item i {
+                font-size: 1.5rem;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .team-card:hover {
+                transform: none;
+            }
+
+            .blogs-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .blog-card:hover {
+                transform: none;
+            }
+
             .about-content,
             .contact-content {
                 grid-template-columns: 1fr;
@@ -864,7 +1147,9 @@
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#specialization">Specialization</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#team">Team</a></li>
                 <li><a href="#blogs">Blogs</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li><a href="#know-more">Know More</a></li>
@@ -911,7 +1196,7 @@
                 </div>
                 <div class="about-text">
                     <h3>Our Story</h3>
-                    <p>Founded in 2010, Kutumb Architects has grown from a small design studio to a full-service architectural firm with a reputation for innovative design and meticulous attention to detail. Our team of passionate architects and designers is committed to creating spaces that not only meet but exceed our clients' expectations.</p>
+                    <p>Founded in 2018, Kutumb Architects has grown from a small design studio to a full-service architectural firm with a reputation for innovative design and meticulous attention to detail. Our team of passionate architects and designers is committed to creating spaces that not only meet but exceed our clients' expectations.</p>
                     <p>We believe that great architecture emerges from understanding our clients' unique needs, the site's context, and the surrounding environment. Our collaborative approach ensures that every project reflects the client's vision while incorporating sustainable and functional design principles.</p>
                     <p>In her current role, she manages a wide array of projects, from residential and commercial to hospitality and institutional designs. Her responsibilities include client coordination, concept development, and collaboration with a network of consultants and vendors to ensure projects are executed smoothly from start to finish.</p>
                     <div class="stats">
@@ -933,13 +1218,59 @@
                                 <span class="stat-label">Projects</span>
                             </div>
                         </div>
-                        <div class="stat">
-                            <div class="stat-icon">
-                                <i class="fas fa-users"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Specialization Section -->
+    <section id="specialization" class="specialization">
+        <div class="container">
+            <h2 class="section-title">Our Specialization</h2>
+            <div class="specialization-content">
+                <div class="specialization-text">
+                    <p>Our strength is in our comprehensive understanding and implementation of the entire Architectural and Construction process in the Indian context.</p>
+                    <p>KUTUMB Architects and Designers has a proven ability to deliver projects in any sector and within controlled budgets.</p>
+                    <p>We offer our clients the entire gamut of services ranging from macro level project planning and site analysis to fine grained project detailing.</p>
+                </div>
+                
+                <div class="specialization-details">
+                    <div class="regulatory-process">
+                        <h3>Regulatory Process</h3>
+                        <p>Coordination and facilitation with regulatory authorities for statutory project requirements.</p>
+                    </div>
+                    
+                    <div class="project-scope">
+                        <h3>Project Scope</h3>
+                        <div class="scope-grid">
+                            <div class="scope-item">
+                                <i class="fas fa-home"></i>
+                                <span>Residence</span>
                             </div>
-                            <div class="stat-content">
-                                <span class="stat-number">50+</span>
-                                <span class="stat-label">Awards</span>
+                            <div class="scope-item">
+                                <i class="fas fa-building"></i>
+                                <span>Housing</span>
+                            </div>
+                            <div class="scope-item">
+                                <i class="fas fa-briefcase"></i>
+                                <span>Commercial</span>
+                            </div>
+                            <div class="scope-item">
+                                <i class="fas fa-concierge-bell"></i>
+                                <span>Hospitality</span>
+                            </div>
+                            <div class="scope-item">
+                                <i class="fas fa-store"></i>
+                                <span>Retail</span>
+                            </div>
+                            <div class="scope-item">
+                                <i class="fas fa-industry"></i>
+                                <span>Industrial</span>
+                            </div>
+                            <div class="scope-item">
+                                <i class="fas fa-university"></i>
+                                <span>Institutional</span>
                             </div>
                         </div>
                     </div>
@@ -1025,7 +1356,23 @@
                         </div>
                     </div>
                     <div class="project-info">
-                        <h3>Hostel</h3>
+                        <h3>Banquet Hall</h3>
+                        <span class="project-type">Hospitality</span>
+                        <p class="project-description">Maharana Banquet Hall</p>
+                        <span class="read-more-btn" onclick="toggleDescription(this)">Read More</span>
+                    </div>
+                            </div>
+                            
+                <div class="project-card">
+                    <div class="project-image" style="background-image: url('Images/img_6.jpeg');">
+                        <div class="project-overlay">
+                            <div class="overlay-content">
+                                <a href="#" class="view-project-btn">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Commercial Hostel</h3>
                         <span class="project-type">Commercial</span>
                         <p class="project-description">A (110' X 30') commercial planning commercial hostel.</p>
                         <span class="read-more-btn" onclick="toggleDescription(this)">Read More</span>
@@ -1033,7 +1380,7 @@
                             </div>
                             
                 <div class="project-card">
-                    <div class="project-image" style="background-image: url('Images/img_6.jpeg');">
+                    <div class="project-image" style="background-image: url('Images/img_7.jpeg');">
                         <div class="project-overlay">
                             <div class="overlay-content">
                                 <a href="#" class="view-project-btn">View Project</a>
@@ -1049,22 +1396,6 @@
                             </div>
                             
                 <div class="project-card">
-                    <div class="project-image" style="background-image: url('Images/img_7.jpeg');">
-                        <div class="project-overlay">
-                            <div class="overlay-content">
-                                <a href="#" class="view-project-btn">View Project</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Narendra Ji Interior Site</h3>
-                        <span class="project-type">Interior</span>
-                        <p class="project-description">Interior site design and implementation for Narendra Ji.</p>
-                        <span class="read-more-btn" onclick="toggleDescription(this)">Read More</span>
-                    </div>
-                            </div>
-                            
-                <div class="project-card">
                     <div class="project-image" style="background-image: url('Images/img_8.jpeg');">
                         <div class="project-overlay">
                             <div class="overlay-content">
@@ -1075,7 +1406,7 @@
                     <div class="project-info">
                         <h3>Modern Interior Design</h3>
                         <span class="project-type">Interior</span>
-                        <p class="project-description">An intimate hotel experience with a focus on local culture and materials.</p>
+                        <p class="project-description">Interior site design and implementation for Narendra Ji.</p>
                         <span class="read-more-btn" onclick="toggleDescription(this)">Read More</span>
                     </div>
                             </div>
@@ -1147,6 +1478,58 @@
         </div>
     </section>
 
+    <!-- Meet the Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <div class="team-header">
+                <h2 class="section-title">Meet Our Team</h2>
+                <div class="team-divider"></div>
+                <p class="team-description">We are a dedicated group of professionals passionate about creating innovative architectural solutions.</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-card-content">
+                        <img class="team-photo" src="Images/Jyoti.jpeg" alt="Jyoti Saxena">
+                        <h3 class="team-name">Jyoti Saxena</h3>
+                        <p class="team-position">Lead Architect</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-card-content">
+                        <img class="team-photo" src="Images/Somitra.jpeg" alt="Ar. Somitra Bhardwaj">
+                        <h3 class="team-name">Ar. Somitra Bhardwaj</h3>
+                        <p class="team-position">Design Head</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-card-content">
+                        <img class="team-photo" src="Images/Deepak.jpeg" alt="Ar. Deepak Prajapati">
+                        <h3 class="team-name">Ar. Deepak Prajapati</h3>
+                        <p class="team-position">Architect</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-card-content">
+                        <div class="team-photo-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <h3 class="team-name">Padma D Cassa</h3>
+                        <p class="team-position">Structural Agency Lucknow</p>
+                    </div>
+                </div>
+                <div class="team-card">
+                    <div class="team-card-content">
+                        <div class="team-photo-placeholder">
+                            <i class="fas fa-cube"></i>
+                        </div>
+                        <h3 class="team-name">Essence Indore</h3>
+                        <p class="team-position">3D Visualization</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="client-feedback" class="client-feedback">
         <div class="container">
             <h2 class="section-title">Client Feedback</h2>
@@ -1154,29 +1537,29 @@
                 <div class="feedback-card">
                     <p>"The design brought our vision to life—elegant, functional, and perfectly suited to the site."</p>
                     <div class="client-info">
-                        <strong>Rajesh Sharma</strong>
-                        <span>Luxury Villa Project</span>
+                        <strong>C.P. Shukla</strong>
+                        <span>Residential Interior</span>
                     </div>
                 </div>
                 <div class="feedback-card">
                     <p>"A seamless experience from start to finish. The space feels both inspiring and practical."</p>
                     <div class="client-info">
-                        <strong>Priya Patel</strong>
-                        <span>Office Complex Project</span>
+                        <strong>Vishu Gocher Ji</strong>
+                        <span>Mixed Used Planning (Residential + Hostel)</span>
                     </div>
                 </div>
                 <div class="feedback-card">
                     <p>"We were impressed by the creativity and professionalism. The final result exceeded expectations."</p>
                     <div class="client-info">
-                        <strong>Vikram Singh</strong>
-                        <span>City Hall Annex Project</span>
+                        <strong>Mahaveer Ji Nayak</strong>
+                        <span>Banquet Cum Marriage Garden</span>
                     </div>
                 </div>
                 <div class="feedback-card">
                     <p>"The blend of modern aesthetics with local materials created a timeless structure."</p>
                     <div class="client-info">
-                        <strong>Ananya Gupta</strong>
-                        <span>Community Center Project</span>
+                        <strong>Mahaveer Ji Nayak</strong>
+                        <span>Maharana Banquet Hall</span>
                     </div>
                 </div>
             </div>
@@ -1185,28 +1568,30 @@
 
     <section id="blogs" class="blogs">
         <div class="container">
-            <h2 class="section-title">Latest Blogs / News</h2>
+            <div class="blogs-header">
+                <h2 class="section-title">Latest News/Blogs</h2>
+                <div class="blogs-divider"></div>
+                <p class="blogs-description">A curated selection of our finest architectural works across various categories.</p>
+            </div>
             <div class="blogs-grid">
-                <div class="blog-card">
-                    <img src="img/other_projects/img_1.jpg" alt="Sustainable Architecture Blog" class="blog-image">
-                    <div class="blog-content">
-                        <div class="blog-date">August 25, 2025</div>
-                        <h3 class="blog-title">The Rise of Sustainable Urban Design</h3>
-                        <p class="blog-excerpt">Exploring how architects are integrating eco-friendly materials and biophilic design to create healthier, more sustainable urban environments.</p>
+                <a href="Portfolio.html" class="blog-card-link">
+                    <div class="blog-card">
+                        <img src="Images/blog_1.png" alt="Blogs" class="blog-image">
                     </div>
-                </div>
+                </a>
+
+                <a href="Portfolio.html" class="blog-card-link">
+                    <div class="blog-card">
+                        <img src="Images/img_14.jpg" alt="Intach" class="blog-image">
+                    </div>
+                </a>
 
                 <div class="blog-card">
-                    <img src="img/other_projects/img_2.jpg" alt="New Technology in Architecture" class="blog-image">
-                    <div class="blog-content">
-                        <div class="blog-date">August 18, 2025</div>
-                        <h3 class="blog-title">Innovating with AI: The Future of Architectural Visualization</h3>
-                        <p class="blog-excerpt">A deep dive into how artificial intelligence is revolutionizing the design process, from concept to final rendering, and what it means for the industry.</p>
-                    </div>
+                    <img src="Images/img_15.png" alt="Kota Heritage Society" class="blog-image">
                 </div>
             </div>
         </div>
-                    </section>
+    </section>
 
     <section id="contact" class="contact">
         <div class="container">
@@ -1234,6 +1619,7 @@
                             <div>
                                 <h4>Phone</h4>
                                 <p>+91 7737800833</p>
+                                <p>+91 8755063096</p>
                             </div>
                         </div>
                         <div class="contact-item">
